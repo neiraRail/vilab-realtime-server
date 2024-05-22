@@ -1,0 +1,20 @@
+{
+  "name": "real-time-server",
+  "version": "1.0.0",
+  "description": "periodic real time server for vilab",
+  "main": "realtime.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mongodb": "^6.6.1",
+    "nodeplotlib": "^1.1.2",
+    "perf_hooks": "^0.0.1",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
+  }
+}
