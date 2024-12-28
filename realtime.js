@@ -31,7 +31,7 @@ io.on("connection", socket => {
     socket.on('realtime', (data) => {
         let last_tm = 0;
         interval_id = setInterval(async () => {
-            if (ejecuciones >= 1000) {
+            if (ejecuciones >= 100) {
                 clearInterval(interval_id);
                 console.log('Intervalo terminado después de 1000 ejecuciones.');
                 return;
@@ -46,6 +46,12 @@ io.on("connection", socket => {
                 
                 if (docs.length === 0) {
                     console.log('No hay datos')
+                    return;
+                }
+
+                if(ejecuciones == 1){
+                    console.log('Primera ejecución');
+                    last_tm = docs[0].tm;
                     return;
                 }
 
